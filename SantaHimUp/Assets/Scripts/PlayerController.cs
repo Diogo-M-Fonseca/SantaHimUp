@@ -9,15 +9,16 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
 
     [Header("Combat")]
-    [SerializeField] private Transform attackPoint;
-    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private Transform attackPoint; 
     [SerializeField] private float attackDamage = 12f;
     [SerializeField] private float attackCooldown = 0.3f;
     [SerializeField] private bool canAttack = true;
-    [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private float knockbackForce = 4f;
 
-    [Header("Animation")]
-    [SerializeField] private Animator anim;
+    //[Header("Animation")]
+    //[SerializeField] private Animator anim;
+
+    private bool isAttacking = false;
 
     void Start()
     {
@@ -56,51 +57,45 @@ public class PlayerController : MonoBehaviour
 
     void HandleAnimation()
     {
-        anim.SetFloat("Speed", rb.linearVelocity.magnitude);
+        //anim.SetFloat("Speed", rb.linearVelocity.magnitude);
     }
 
     void TryAttack()
     {
         if (!canAttack) return;
 
-        anim.SetTrigger("Attack");
         canAttack = false;
+        isAttacking = true;
+        //anim.SetTrigger("Attack");
 
-        // Delay hit to match animation
-        Invoke(nameof(DoAttack), 0.1f);
-        Invoke(nameof(ResetAttack), attackCooldown);
+        Invoke(nameof(EndAttack), attackCooldown);
     }
 
-    void DoAttack()
+    void EndAttack()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            attackPoint.position,
-            attackRange,
-            enemyLayers
-        );
+        canAttack = true;
+        isAttacking = false;
+    }
 
-        foreach (Collider2D hit in hits)
+    private void OnMouseDown()
+    {
+        if (!canAttack) return;
+        else if (Input.GetMouseButtonDown(0))
         {
-            Enemy enemy = hit.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                
-                Vector2 dir = (hit.transform.position - transform.position).normalized;
-
-                enemy.TakeDamage(attackDamage, dir);
-            }
+            
         }
     }
 
-    void ResetAttack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        canAttack = true;
-    }
+        if (!isAttacking) return; 
 
-    void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null) return;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+          
+            Vector2 knockDir = (collision.transform.position - transform.position).normalized;
+            enemy.TakeDamage(attackDamage, knockDir * knockbackForce);
+        }
     }
 }

@@ -4,8 +4,8 @@ public class Enemy : MonoBehaviour
 {
     [Header("Assign the Player Transform manually")]
     [SerializeField] private Transform player;   
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Animator anim;
+    private Rigidbody2D rb;
+    //[SerializeField] private Animator anim;
 
     [Header("Stats")]
     [SerializeField] private float maxHealth = 50f;
@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
     }
 
@@ -36,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         if (player == null)
         {
-            anim.SetBool("isMoving", false);
+            //anim.SetBool("isMoving", false);
             rb.linearVelocity = Vector2.zero;
             return;
         }
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
-                anim.SetBool("isMoving", false);
+                //anim.SetBool("isMoving", false);
                 rb.linearVelocity = Vector2.zero;
                 break;
 
@@ -65,28 +66,36 @@ public class Enemy : MonoBehaviour
                 Attack();
                 break;
         }
-        if (player.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1);
-        else
-            transform.localScale = new Vector3(-1, 1, 1);
+
+        // Flip
+        transform.localScale = new Vector3(
+            player.position.x > transform.position.x ? 1 : -1,
+            1,
+            1
+        );
     }
 
     void ChasePlayer()
     {
-        anim.SetBool("isMoving", true);
+        //anim.SetBool("isMoving", true);
+
         Vector2 dir = (player.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(dir.x * moveSpeed, rb.linearVelocity.y);
+
+        rb.linearVelocity = new Vector2(
+            dir.x * moveSpeed,
+            rb.linearVelocity.y
+        );
     }
 
     void Attack()
     {
-        anim.SetBool("isMoving", false);
+        //anim.SetBool("isMoving", false);
         rb.linearVelocity = Vector2.zero;
 
         if (Time.time - lastAttackTime >= attackCooldown)
         {
             lastAttackTime = Time.time;
-            anim.SetTrigger("attack");
+            //anim.SetTrigger("attack");
 
             DealDamage(); 
         }
@@ -106,7 +115,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= dmg;
         rb.AddForce(knockDir.normalized * knockbackForce, ForceMode2D.Impulse);
 
-        anim.SetTrigger("hit");
+        //anim.SetTrigger("hit");
 
         if (currentHealth <= 0)
             Die();
@@ -114,7 +123,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        anim.SetTrigger("die");
+        //anim.SetTrigger("die");
         rb.linearVelocity = Vector2.zero;
         this.enabled = false;
         Destroy(gameObject, 2f);
