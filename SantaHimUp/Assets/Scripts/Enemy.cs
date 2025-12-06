@@ -3,8 +3,9 @@
 public class Enemy : MonoBehaviour
 {
     [Header("Assign the Player Transform manually")]
-    [SerializeField] private Transform player;   
+    [SerializeField] private Transform player;
     private Rigidbody2D rb;
+
     //[SerializeField] private Animator anim;
 
     [Header("Stats")]
@@ -22,7 +23,18 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float lastAttackTime;
 
     [Header("Knockback")]
-    [SerializeField] private float knockbackForce = 4f;
+    [SerializeField] private float knockbackForce = 10f;
+
+    [Header("Stun")]
+    [SerializeField] private float stunDuration = 0.3f;
+    private bool isStunned = false;
+    private float stunEndTime;
+
+    [Header("Hit Flash")]
+    [SerializeField] private SpriteRenderer sr; // assign manually or auto-assign
+    [SerializeField] private Color hitColor = Color.white;
+    [SerializeField] private float flashDuration = 0.1f;
+    private Color originalColor;
 
     private enum State { Idle, Chase, Attack }
     private State currentState = State.Idle;
@@ -31,10 +43,24 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+
+        if (sr == null)
+            sr = GetComponent<SpriteRenderer>();
+
+        originalColor = sr.color;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        // Handle stun
+        if (isStunned)
+        {
+            rb.linearVelocity = Vector2.zero;
+            if (Time.time >= stunEndTime)
+                isStunned = false;
+            return;
+        }
+
         if (player == null)
         {
             //anim.SetBool("isMoving", false);
@@ -67,7 +93,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
 
-        // Flip
+        // Flip sprite
         transform.localScale = new Vector3(
             player.position.x > transform.position.x ? 1 : -1,
             1,
@@ -78,7 +104,6 @@ public class Enemy : MonoBehaviour
     void ChasePlayer()
     {
         //anim.SetBool("isMoving", true);
-
         Vector2 dir = (player.position - transform.position).normalized;
 
         rb.linearVelocity = new Vector2(
@@ -96,8 +121,7 @@ public class Enemy : MonoBehaviour
         {
             lastAttackTime = Time.time;
             //anim.SetTrigger("attack");
-
-            DealDamage(); 
+            DealDamage();
         }
     }
 
@@ -113,12 +137,28 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float dmg, Vector2 knockDir)
     {
         currentHealth -= dmg;
-        rb.AddForce(knockDir.normalized * knockbackForce, ForceMode2D.Impulse);
 
-        //anim.SetTrigger("hit");
+        isStunned = true;
+        stunEndTime = Time.time + stunDuration;
+        rb.AddRelativeForce(knockDir.normalized * knockbackForce, ForceMode2D.Impulse);
+
+        FlashHit();
 
         if (currentHealth <= 0)
             Die();
+    }
+
+    private void FlashHit()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FlashCoroutine());
+    }
+
+    private System.Collections.IEnumerator FlashCoroutine()
+    {
+        sr.color = hitColor;
+        yield return new WaitForSeconds(flashDuration);
+        sr.color = originalColor;
     }
 
     void Die()

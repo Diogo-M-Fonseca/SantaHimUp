@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -9,14 +10,11 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
 
     [Header("Combat")]
-    [SerializeField] private Transform attackPoint; 
+    [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackDamage = 12f;
     [SerializeField] private float attackCooldown = 0.3f;
     [SerializeField] private bool canAttack = true;
-    [SerializeField] private float knockbackForce = 4f;
-
-    //[Header("Animation")]
-    //[SerializeField] private Animator anim;
+    [SerializeField] private float knockbackMultiplier = 1.5f;
 
     private bool isAttacking = false;
 
@@ -29,10 +27,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleInput();
-        HandleAnimation();
 
-        if (Input.GetKeyDown(KeyCode.J))
-            TryAttack();
+        if (Input.GetMouseButtonDown(0) && canAttack)
+        {
+            Attack();
+        }
     }
 
     void FixedUpdate()
@@ -45,7 +44,6 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-        // Flip only horizontally
         if (input.x != 0)
             sr.flipX = input.x < 0;
     }
@@ -55,47 +53,42 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = input.normalized * moveSpeed;
     }
 
-    void HandleAnimation()
+    void Attack()
     {
-        //anim.SetFloat("Speed", rb.linearVelocity.magnitude);
-    }
-
-    void TryAttack()
-    {
-        if (!canAttack) return;
-
         canAttack = false;
-        isAttacking = true;
-        //anim.SetTrigger("Attack");
 
-        Invoke(nameof(EndAttack), attackCooldown);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, 0.7f);
+
+        foreach (Collider2D col in hitEnemies)
+        {
+            if (col.CompareTag("Enemy"))
+            {
+                Enemy enemy = col.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    Vector2 knockDir =
+                        (col.transform.position - transform.position).normalized
+                        * knockbackMultiplier;
+
+                    enemy.TakeDamage(attackDamage, knockDir);
+                }
+            }
+        }
+
+        Invoke(nameof(ResetAttack), attackCooldown);
     }
 
-    void EndAttack()
+    void ResetAttack()
     {
         canAttack = true;
         isAttacking = false;
     }
 
-    private void OnMouseDown()
+    void OnDrawGizmosSelected()
     {
-        if (!canAttack) return;
-        else if (Input.GetMouseButtonDown(0))
-        {
-            
-        }
-    }
+        if (attackPoint == null) return;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!isAttacking) return; 
-
-        Enemy enemy = collision.GetComponent<Enemy>();
-        if (enemy != null)
-        {
-          
-            Vector2 knockDir = (collision.transform.position - transform.position).normalized;
-            enemy.TakeDamage(attackDamage, knockDir * knockbackForce);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, 0.8f);
     }
 }
