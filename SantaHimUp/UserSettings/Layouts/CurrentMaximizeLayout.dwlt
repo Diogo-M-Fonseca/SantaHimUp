@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 5259
+  controlID: 2308
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -196,7 +196,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 62eefeffd6f8fefffcf8feff0cfafeffa413ffff7c14ffff261dffff2025ffff841b0100a61b0100
+      m_ExpandedIDs: 16f6ffff14f8ffff0afbffff24b6000028b60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5191
+  controlID: 2240
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -909,9 +909,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.4534904, y: -1.357691, z: -9.9838}
+    m_Target: {x: 3.6821764, y: -1.3749523, z: -0.006734172}
     speed: 2
-    m_Value: {x: 1.4534904, y: -1.357691, z: -9.9838}
+    m_Value: {x: 3.6821764, y: -1.3749523, z: -0.006734172}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -961,9 +961,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.042202
+    m_Target: 6.839136
     speed: 2
-    m_Value: 6.042202
+    m_Value: 6.839136
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   - {fileID: 11}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1153,7 +1153,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 72878
+  m_LastSelectedObjectID: 46644
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1272,7 +1272,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Images/Spritesheet
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1282,16 +1282,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets/Images/Spritesheet
+  - Assets/Prefabs
   m_LastFoldersGridSize: 68
   m_LastProjectPath: "C:\\Users\\noteb\\OneDrive\\\xC1rea de Trabalho\\SantaHimUp\\SantaHimUp\\SantaHimUp"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a4100100
-    m_LastClickedID: 69796
-    m_ExpandedIDs: 00000000d0f6000092f8000000ca9a3b
+    m_SelectedIDs: deb40000
+    m_LastClickedID: 46302
+    m_ExpandedIDs: 00000000e0b2000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1320,7 +1320,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0f6000000ca9a3b
+    m_ExpandedIDs: 00000000e0b2000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1346,9 +1346,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 34b60000
+    m_LastClickedInstanceID: 46644
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300006c6d00004a6d0000466d0000546d0000406d000048c40000fec30000366f0000706f0000e2b4000030b5000058b700003cb300002c2e0100282e010050b2000000000000e4be000074ae0000daca000030c6000004b9000094cf0000dcdf0000d8df00003ee4000054c10000f0700000a4b300001c0f01003e0a0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 46644
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
