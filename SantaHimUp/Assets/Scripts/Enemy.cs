@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class Enemy : MonoBehaviour
     private enum State { Idle, Chase, Attack }
     private State currentState = State.Idle;
 
+    public bool IsAlive { get; private set; } = true;
+    private LevelDesign levelDesign;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,6 +61,10 @@ public class Enemy : MonoBehaviour
         }
 
         originalColor = sr.color;
+        
+        levelDesign = FindObjectOfType<LevelDesign>();
+        if (levelDesign != null)
+            levelDesign.RegisterEnemy(this);
     }
 
     void FixedUpdate()
@@ -168,9 +176,13 @@ public class Enemy : MonoBehaviour
         sr.color = originalColor;
     }
 
-    void Die()
+    public void Die()
     {
-        //anim.SetTrigger("die");
+        IsAlive = false;
+        if (levelDesign != null)
+            levelDesign.UnregisterEnemy(this);
+        
+        // Add your death animation/effect here
         rb.linearVelocity = Vector2.zero;
         this.enabled = false;
         Destroy(gameObject, 2f);

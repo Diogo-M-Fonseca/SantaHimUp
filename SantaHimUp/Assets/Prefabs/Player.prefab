@@ -109,9 +109,9 @@ MonoBehaviour:
   attackPointDistance: 1
   attackDamage: 12
   attackCooldown: 0.3
-  canAttack: 1
   knockbackMultiplier: 5
   cam: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &8007368846662626259
 MonoBehaviour:
   m_ObjectHideFlags: 0
