@@ -373,10 +373,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   attackPoint: {fileID: 364536166}
+  attackPointDistance: 1
   attackDamage: 12
   attackCooldown: 0.3
   canAttack: 1
   knockbackMultiplier: 5
+  cam: {fileID: 153288072}
 --- !u!212 &953699413
 SpriteRenderer:
   m_ObjectHideFlags: 0
