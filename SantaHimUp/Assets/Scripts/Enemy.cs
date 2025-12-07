@@ -140,7 +140,7 @@ public class Enemy : MonoBehaviour
 
         isStunned = true;
         stunEndTime = Time.time + stunDuration;
-        rb.AddRelativeForce(knockDir.normalized * knockbackForce, ForceMode2D.Impulse);
+        rb.AddForce(knockDir.normalized * knockbackForce, ForceMode2D.Impulse);
 
         FlashHit();
 
