@@ -111,10 +111,15 @@ public class PlayerController : MonoBehaviour
             if (col.CompareTag("Enemy"))
             {
                 Enemy enemy = col.GetComponent<Enemy>();
+                Santa santa = col.GetComponent<Santa>();
                 if (enemy != null)
                 {
                     Vector2 knockDir = attackDir * knockbackMultiplier;
                     enemy.TakeDamage(attackDamage, knockDir);
+                }
+                else if (santa  != null)
+                {
+                    santa.TakeDamage(attackDamage, attackDir);
                 }
             }
         }

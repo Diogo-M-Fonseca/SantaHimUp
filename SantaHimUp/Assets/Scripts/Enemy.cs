@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform player;
     private Rigidbody2D rb;
 
-    //[SerializeField] private Animator anim;
+    [SerializeField] private Animator anim;
 
     [Header("Stats")]
     [SerializeField] private float maxHealth = 50f;
@@ -33,8 +33,8 @@ public class Enemy : MonoBehaviour
 
     [Header("Hit Flash")]
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private Color hitColor = Color.white;
-    [SerializeField] private float flashDuration = 0.1f;
+    [SerializeField] private Color hitColor = Color.red;
+    [SerializeField] private float flashDuration = 0.5f;
     private Color originalColor;
 
     private enum State { Idle, Chase, Attack }
@@ -47,6 +47,8 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+
+        anim = GetComponent<Animator>();
 
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
@@ -178,11 +180,15 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+<<<<<<< HEAD
         IsAlive = false;
         if (levelDesign != null)
             levelDesign.UnregisterEnemy(this);
         
         // Add your death animation/effect here
+=======
+        anim.SetTrigger("die");
+>>>>>>> cb472d1f38fc01340ba350edacbd8f5abb95bc31
         rb.linearVelocity = Vector2.zero;
         this.enabled = false;
         Destroy(gameObject, 2f);
