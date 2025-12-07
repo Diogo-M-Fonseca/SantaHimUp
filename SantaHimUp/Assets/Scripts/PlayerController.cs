@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -14,11 +13,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackPointDistance = 1.0f;
     [SerializeField] private float attackDamage = 12f;
     [SerializeField] private float attackCooldown = 0.3f;
-    [SerializeField] private bool canAttack = true;
+    private bool canAttack = true;
     [SerializeField] private float knockbackMultiplier = 1.5f;
 
     [Header("Camera")]
     [SerializeField] private Camera cam;
+
+    [Header("Animation")]
+    [SerializeField] private Animator anim;
+
+    private bool isAttacking = false;
 
     void Start()
     {
@@ -27,6 +31,9 @@ public class PlayerController : MonoBehaviour
 
         if (cam == null)
             cam = Camera.main;
+
+        if (anim == null)
+            anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,12 +43,21 @@ public class PlayerController : MonoBehaviour
         UpdateAttackPoint();
 
         if (Input.GetMouseButtonDown(0) && canAttack)
-            Attack();
+        {
+            StartAttack();
+        }
+
+        // Set walking animation
+        bool isWalking = input.sqrMagnitude > 0.1f && !isAttacking;
+        anim.SetBool("isWalking", isWalking);
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = input.normalized * moveSpeed;
+        if (!isAttacking)
+            rb.linearVelocity = input.normalized * moveSpeed;
+        else
+            rb.linearVelocity = Vector2.zero; // Stop movement while attacking
     }
 
     void HandleInput()
@@ -69,15 +85,27 @@ public class PlayerController : MonoBehaviour
         attackPoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    void Attack()
+    void StartAttack()
     {
         canAttack = false;
+        isAttacking = true;
 
+        // Play attack animation
+        anim.SetTrigger("Attack");
+
+        // Perform attack logic
+        Attack();
+
+        // Reset attack after cooldown
+        Invoke(nameof(ResetAttack), attackCooldown);
+    }
+
+    void Attack()
+    {
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 attackDir = (mousePos - transform.position).normalized;
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, 0.7f);
-
         foreach (Collider2D col in hitEnemies)
         {
             if (col.CompareTag("Enemy"))
@@ -90,13 +118,12 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        Invoke(nameof(ResetAttack), attackCooldown);
     }
 
     void ResetAttack()
     {
         canAttack = true;
+        isAttacking = false;
     }
 
     void OnDrawGizmosSelected()
