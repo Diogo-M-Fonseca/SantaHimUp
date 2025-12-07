@@ -11,51 +11,70 @@ public class PlayerController : MonoBehaviour
 
     [Header("Combat")]
     [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackPointDistance = 1.0f;
     [SerializeField] private float attackDamage = 12f;
     [SerializeField] private float attackCooldown = 0.3f;
     [SerializeField] private bool canAttack = true;
     [SerializeField] private float knockbackMultiplier = 1.5f;
 
-    private bool isAttacking = false;
+    [Header("Camera")]
+    [SerializeField] private Camera cam;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+
+        if (cam == null)
+            cam = Camera.main;
     }
 
     void Update()
     {
         HandleInput();
+        FaceMouse();
+        UpdateAttackPoint();
 
         if (Input.GetMouseButtonDown(0) && canAttack)
-        {
             Attack();
-        }
     }
 
     void FixedUpdate()
     {
-        Move();
+        rb.linearVelocity = input.normalized * moveSpeed;
     }
 
     void HandleInput()
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-
-        if (input.x != 0)
-            sr.flipX = input.x < 0;
     }
 
-    void Move()
+    void FaceMouse()
     {
-        rb.linearVelocity = input.normalized * moveSpeed;
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = mousePos - transform.position;
+
+        sr.flipX = dir.x < 0;
+    }
+
+    void UpdateAttackPoint()
+    {
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = (mousePos - transform.position).normalized;
+
+        attackPoint.position = (Vector2)transform.position + dir * attackPointDistance;
+
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        attackPoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     void Attack()
     {
         canAttack = false;
+
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 attackDir = (mousePos - transform.position).normalized;
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, 0.7f);
 
@@ -66,10 +85,7 @@ public class PlayerController : MonoBehaviour
                 Enemy enemy = col.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    Vector2 knockDir =
-                        (col.transform.position - transform.position).normalized
-                        * knockbackMultiplier;
-
+                    Vector2 knockDir = attackDir * knockbackMultiplier;
                     enemy.TakeDamage(attackDamage, knockDir);
                 }
             }
@@ -81,7 +97,6 @@ public class PlayerController : MonoBehaviour
     void ResetAttack()
     {
         canAttack = true;
-        isAttacking = false;
     }
 
     void OnDrawGizmosSelected()
