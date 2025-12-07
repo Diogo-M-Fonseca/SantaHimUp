@@ -1,0 +1,1021 @@
+fileFormatVersion: 2
+guid: 744c9194b8e48bf46bee8bf0cdca2756
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1082892853954301732
+    second: spritesheet_pai_natal_spawner_0
+  - first:
+      213: -5175496466054281481
+    second: spritesheet_pai_natal_spawner_1
+  - first:
+      213: 916969901470454420
+    second: spritesheet_pai_natal_spawner_2
+  - first:
+      213: -6891225436166838585
+    second: spritesheet_pai_natal_spawner_3
+  - first:
+      213: -7950821299571211926
+    second: spritesheet_pai_natal_spawner_4
+  - first:
+      213: -4234760796305527934
+    second: spritesheet_pai_natal_spawner_5
+  - first:
+      213: -5302511262079796516
+    second: spritesheet_pai_natal_spawner_6
+  - first:
+      213: -9046913558186519254
+    second: spritesheet_pai_natal_spawner_7
+  - first:
+      213: -7573381141789710203
+    second: spritesheet_pai_natal_spawner_8
+  - first:
+      213: -8873979857904619618
+    second: spritesheet_pai_natal_spawner_9
+  - first:
+      213: -8068689865413103970
+    second: spritesheet_pai_natal_spawner_10
+  - first:
+      213: 3651491158916514098
+    second: spritesheet_pai_natal_spawner_11
+  - first:
+      213: 4517745110427614093
+    second: spritesheet_pai_natal_spawner_12
+  - first:
+      213: 1778613079180328693
+    second: spritesheet_pai_natal_spawner_13
+  - first:
+      213: -5802007050335875132
+    second: spritesheet_pai_natal_spawner_14
+  - first:
+      213: 5178948244252405986
+    second: spritesheet_pai_natal_spawner_15
+  - first:
+      213: -4818790649217340824
+    second: spritesheet_pai_natal_spawner_16
+  - first:
+      213: -1401216273384034061
+    second: spritesheet_pai_natal_spawner_17
+  - first:
+      213: -525950503710231066
+    second: spritesheet_pai_natal_spawner_18
+  - first:
+      213: 1926278745335627134
+    second: spritesheet_pai_natal_spawner_19
+  - first:
+      213: -2434237956304101811
+    second: spritesheet_pai_natal_spawner_20
+  - first:
+      213: 7583080869144757697
+    second: spritesheet_pai_natal_spawner_21
+  - first:
+      213: -5223084124222024091
+    second: spritesheet_pai_natal_spawner_22
+  - first:
+      213: -6831920890673594784
+    second: spritesheet_pai_natal_spawner_23
+  - first:
+      213: -8138053381676471748
+    second: spritesheet_pai_natal_spawner_24
+  - first:
+      213: 3758288600839038467
+    second: spritesheet_pai_natal_spawner_25
+  - first:
+      213: -5067958370728872527
+    second: spritesheet_pai_natal_spawner_26
+  - first:
+      213: 4985537430341729664
+    second: spritesheet_pai_natal_spawner_27
+  - first:
+      213: -2644944635658636860
+    second: spritesheet_pai_natal_spawner_28
+  - first:
+      213: 1085142918519145645
+    second: spritesheet_pai_natal_spawner_29
+  - first:
+      213: 7035724640811949746
+    second: spritesheet_pai_natal_spawner_30
+  - first:
+      213: -756843048772639731
+    second: spritesheet_pai_natal_spawner_31
+  - first:
+      213: 1373214725522285739
+    second: spritesheet_pai_natal_spawner_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0be3ecfaac8f0f0800000000000000
+      internalID: -1082892853954301732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_1
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 6000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f68b849261fc28b0800000000000000
+      internalID: -5175496466054281481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_2
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 6000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4921fde544bb9bc00800000000000000
+      internalID: 916969901470454420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_3
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 6000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6a3222af27d50a0800000000000000
+      internalID: -6891225436166838585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_4
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 6000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61c27e372209a190800000000000000
+      internalID: -7950821299571211926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b65731e7b1b35c0800000000000000
+      internalID: -4234760796305527934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_6
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 5000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdab93ed912b966b0800000000000000
+      internalID: -5302511262079796516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_7
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 5000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2590aa2d08e27280800000000000000
+      internalID: -9046913558186519254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_8
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 5000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5886bfe1af1f5e690800000000000000
+      internalID: -7573381141789710203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_9
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 5000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9faf99e55a49d480800000000000000
+      internalID: -8873979857904619618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ee1413151460090800000000000000
+      internalID: -8068689865413103970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_11
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 4000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231c2b3dcd3bca230800000000000000
+      internalID: 3651491158916514098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_12
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 4000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bbbcced3142be30800000000000000
+      internalID: 4517745110427614093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_13
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 4000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe38690c27eea810800000000000000
+      internalID: 1778613079180328693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_14
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 4000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf0b6cf3512b7fa0800000000000000
+      internalID: -5802007050335875132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e03cc82df15fd740800000000000000
+      internalID: 5178948244252405986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_16
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 3000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a2d628f67302db0800000000000000
+      internalID: -4818790649217340824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_17
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 3000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0b27b2931ed8ce0800000000000000
+      internalID: -1401216273384034061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_18
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 3000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5f9e0bdc273b8f0800000000000000
+      internalID: -525950503710231066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_19
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 3000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d7d1220548bba10800000000000000
+      internalID: 1926278745335627134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e98b3d979d73ed0800000000000000
+      internalID: -2434237956304101811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_21
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 2000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c50f64afd38c3960800000000000000
+      internalID: 7583080869144757697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_22
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 2000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56693cf79a0e387b0800000000000000
+      internalID: -5223084124222024091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_23
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 2000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e74d1a5242031a0800000000000000
+      internalID: -6831920890673594784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_24
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 2000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ae10e0193df0f80800000000000000
+      internalID: -8138053381676471748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3062968f19f182430800000000000000
+      internalID: 3758288600839038467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_26
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5fc3886befaa9b0800000000000000
+      internalID: -5067958370728872527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_27
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 1000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dbeedd0ef203540800000000000000
+      internalID: 4985537430341729664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_28
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 1000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1fdfc0ed44b4bd0800000000000000
+      internalID: -2644944635658636860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_29
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 1000
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da44ddc2cb33f0f00800000000000000
+      internalID: 1085142918519145645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be1f01b84ae3a160800000000000000
+      internalID: 7035724640811949746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_31
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 0
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04ee2fc1472f75f0800000000000000
+      internalID: -756843048772639731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_32
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 0
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4671b6483ae0310800000000000000
+      internalID: 1373214725522285739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_33
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 0
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aab239ba2b21b84a89b5208f4b8ca50
+      internalID: -335295644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_pai_natal_spawner_34
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 0
+        width: 845
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0ff390e195f9047a67206c6b78e2f0
+      internalID: 1378406274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 53873fdd403aacb46b8b42bbdc1e4b96
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_pai_natal_spawner_0: -1082892853954301732
+      spritesheet_pai_natal_spawner_1: -5175496466054281481
+      spritesheet_pai_natal_spawner_10: -8068689865413103970
+      spritesheet_pai_natal_spawner_11: 3651491158916514098
+      spritesheet_pai_natal_spawner_12: 4517745110427614093
+      spritesheet_pai_natal_spawner_13: 1778613079180328693
+      spritesheet_pai_natal_spawner_14: -5802007050335875132
+      spritesheet_pai_natal_spawner_15: 5178948244252405986
+      spritesheet_pai_natal_spawner_16: -4818790649217340824
+      spritesheet_pai_natal_spawner_17: -1401216273384034061
+      spritesheet_pai_natal_spawner_18: -525950503710231066
+      spritesheet_pai_natal_spawner_19: 1926278745335627134
+      spritesheet_pai_natal_spawner_2: 916969901470454420
+      spritesheet_pai_natal_spawner_20: -2434237956304101811
+      spritesheet_pai_natal_spawner_21: 7583080869144757697
+      spritesheet_pai_natal_spawner_22: -5223084124222024091
+      spritesheet_pai_natal_spawner_23: -6831920890673594784
+      spritesheet_pai_natal_spawner_24: -8138053381676471748
+      spritesheet_pai_natal_spawner_25: 3758288600839038467
+      spritesheet_pai_natal_spawner_26: -5067958370728872527
+      spritesheet_pai_natal_spawner_27: 4985537430341729664
+      spritesheet_pai_natal_spawner_28: -2644944635658636860
+      spritesheet_pai_natal_spawner_29: 1085142918519145645
+      spritesheet_pai_natal_spawner_3: -6891225436166838585
+      spritesheet_pai_natal_spawner_30: 7035724640811949746
+      spritesheet_pai_natal_spawner_31: -756843048772639731
+      spritesheet_pai_natal_spawner_32: 1373214725522285739
+      spritesheet_pai_natal_spawner_33: -335295644
+      spritesheet_pai_natal_spawner_34: 1378406274
+      spritesheet_pai_natal_spawner_4: -7950821299571211926
+      spritesheet_pai_natal_spawner_5: -4234760796305527934
+      spritesheet_pai_natal_spawner_6: -5302511262079796516
+      spritesheet_pai_natal_spawner_7: -9046913558186519254
+      spritesheet_pai_natal_spawner_8: -7573381141789710203
+      spritesheet_pai_natal_spawner_9: -8873979857904619618
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
