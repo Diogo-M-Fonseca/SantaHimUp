@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     private float stunEndTime;
 
     [Header("Hit Flash")]
-    [SerializeField] private SpriteRenderer sr; // assign manually or auto-assign
+    [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hitColor = Color.white;
     [SerializeField] private float flashDuration = 0.1f;
     private Color originalColor;
@@ -47,12 +47,20 @@ public class Enemy : MonoBehaviour
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
 
+        if (player == null)
+        {
+            PlayerHealth ph = FindObjectOfType<PlayerHealth>();
+            if (ph != null)
+                player = ph.transform;
+            else
+                Debug.LogWarning($"{name} could not find PlayerHealth in scene!");
+        }
+
         originalColor = sr.color;
     }
 
     void FixedUpdate()
     {
-        // Handle stun
         if (isStunned)
         {
             rb.linearVelocity = Vector2.zero;
@@ -93,7 +101,6 @@ public class Enemy : MonoBehaviour
                 break;
         }
 
-        // Flip sprite
         transform.localScale = new Vector3(
             player.position.x > transform.position.x ? 1 : -1,
             1,
